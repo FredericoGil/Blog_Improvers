@@ -35,13 +35,23 @@
       			<span class="icon-bar"></span>
     		</button>
     		<%= link_to 'New Post', new_post_path, class: 'navbar-brand' %>
+
+        <div id="secondaryContent" class="text-left">
+          <%= render 'devise/common/session' %>
+        </div>
+        
   		</div>
 	</nav>
 </header>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <main role="main">
-	<%=yield%>
+
+	<%= yield %>
 <main>
+
+
 
 </body>
 

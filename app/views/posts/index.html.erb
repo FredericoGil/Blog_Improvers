@@ -9,8 +9,10 @@
         <p><%= post.conteudo %></p>
         <p>
         	<%= link_to 'Ver Mais', post, class: 'btn btn-primary' %>
+          <% if user_signed_in? %>
         	<%= link_to 'Editar', edit_post_path(post), class: 'btn btn-default' %>
         	<%= link_to 'Excluir', post, class: 'btn btn-default', :confirm => 'Tem certeza?', :method => :delete %>
+          <% end %>
         </p>
       </div>
     </div>
